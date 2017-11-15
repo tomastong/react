@@ -1,17 +1,17 @@
 1、state，又称为state tree， 可能是这么一种结构（只能看不能动）
 
-{
-    dothing:'show_all'
-    login:{
-        isLogin : false,
-        show : true
+    {
+        dothing:'show_all'
+        login:{
+            isLogin : false,
+            show : true
 
-        inputbutton:{
-            active: false
-            text: 'sign up'
+            inputbutton:{
+                active: false
+                text: 'sign up'
+            }
         }
     }
-}
 
 2、reducer，主要就是通过action更新state，其中是主要的业务逻辑处理
     
@@ -41,17 +41,17 @@
 
 1、基于一定的处理原则(reducer)，获取到store
 
-const store = createStore(reducer)
+    const store = createStore(reducer)
 
 2、根据reducer中的处理逻辑，传入对应的action，进行处理state
 
-store.dispatch(action)
+    store.dispatch(action)
 
 3、生成相应的映射方法
+    
+    mapStateToProps, 负责输入逻辑，即将state映射到 UI 组件的参数（props）
 
-   mapStateToProps，负责输入逻辑，即将state映射到 UI 组件的参数（props）
-
-   mapDispatchToProps负责输出逻辑，即将用户对 UI 组件的操作映射成 Action。
+    mapDispatchToProps, 负责输出逻辑，即将用户对 UI 组件的操作映射成 Action。
 
 4、连接组件
 
